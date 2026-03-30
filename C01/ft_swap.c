@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louisblankaert <louisblankaert@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/30 17:26:53 by louisblanka       #+#    #+#             */
-/*   Updated: 2026/03/30 18:20:22 by louisblanka      ###   ########.fr       */
+/*   Created: 2026/03/30 22:35:06 by louisblanka       #+#    #+#             */
+/*   Updated: 2026/03/30 22:35:39 by louisblanka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void    ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }

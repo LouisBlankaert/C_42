@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louisblankaert <louisblankaert@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/30 17:26:53 by louisblanka       #+#    #+#             */
-/*   Updated: 2026/03/30 18:20:22 by louisblanka      ###   ########.fr       */
+/*   Created: 2026/03/30 22:25:11 by louisblanka       #+#    #+#             */
+/*   Updated: 2026/03/30 22:35:00 by louisblanka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void    ft_ultimate_ft(int *********nbr)
 {
-	write(1, &c, 1);
+	*********nbr = 42;
 }
