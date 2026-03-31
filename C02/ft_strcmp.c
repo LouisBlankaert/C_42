@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louisblankaert <louisblankaert@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/30 18:21:51 by louisblanka       #+#    #+#             */
-/*   Updated: 2026/03/31 14:14:22 by louisblanka      ###   ########.fr       */
+/*   Created: 2026/03/31 18:29:39 by louisblanka       #+#    #+#             */
+/*   Updated: 2026/03/31 19:17:31 by louisblanka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char c;
-	
-	c = 'a';
-	while (c <= 'z')
+	int i;
+
+	i = 0;
+	while(s1[i] && s1[i] == s2[i])
 	{
-		write(1, &c, 1);
-		c++;
+		i++;
 	}
+	return s1[i] - s2[i]; 
 }

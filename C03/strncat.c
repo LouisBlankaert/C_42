@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   strncat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louisblankaert <louisblankaert@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/30 18:21:51 by louisblanka       #+#    #+#             */
-/*   Updated: 2026/03/31 14:14:22 by louisblanka      ###   ########.fr       */
+/*   Created: 2026/03/31 23:15:36 by louisblanka       #+#    #+#             */
+/*   Updated: 2026/03/31 23:23:42 by louisblanka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char c;
-	
-	c = 'a';
-	while (c <= 'z')
+	unsigned i;
+	unsigned j;
+
+	i = 0;
+	while (dest[i])
+		i++;
+	j = 0;
+	while (src[j] && j < nb)
 	{
-		write(1, &c, 1);
-		c++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
+	dest[i] = '\0';
+	return dest;
 }

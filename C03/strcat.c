@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   strcat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louisblankaert <louisblankaert@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/30 18:21:51 by louisblanka       #+#    #+#             */
-/*   Updated: 2026/03/31 14:14:22 by louisblanka      ###   ########.fr       */
+/*   Created: 2026/03/31 22:10:27 by louisblanka       #+#    #+#             */
+/*   Updated: 2026/03/31 23:10:05 by louisblanka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+char *ft_strcat(char *dest, char *src)
 {
-	char c;
-	
-	c = 'a';
-	while (c <= 'z')
+	int i;
+	int j;
+
+	i = 0;
+	while (dest[i])
 	{
-		write(1, &c, 1);
-		c++;
+		i++;
 	}
+	j = 0;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
+	return dest;
 }
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	char dest[] = "salut";
+// 	char src[] = "Louis";
+// 	printf("%s\n", ft_strcat(dest, src));
+// 	return 0;
+// }

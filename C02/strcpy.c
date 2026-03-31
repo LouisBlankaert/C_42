@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   strcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louisblankaert <louisblankaert@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/30 18:21:51 by louisblanka       #+#    #+#             */
-/*   Updated: 2026/03/31 14:14:22 by louisblanka      ###   ########.fr       */
+/*   Created: 2026/03/31 14:57:54 by louisblanka       #+#    #+#             */
+/*   Updated: 2026/03/31 17:38:52 by louisblanka      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+#include <stdio.h>
+char	*ft_strcpy(char *dest, char *src)
 {
-	char c;
-	
-	c = 'a';
-	while (c <= 'z')
+	int i;
+
+	i = 0;
+	while (src[i])
 	{
-		write(1, &c, 1);
-		c++;
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = '\0';
+	return dest;
+}
+
+int main (int argc, char **argv)
+{
+	char dest[20];
+
+	if (argc != 2)
+	{
+		printf("Que 1 arguments possible");
+		return 1;
+	}
+	printf("%s\n", ft_strcpy(dest, argv[1]));
+	return 0;
 }
